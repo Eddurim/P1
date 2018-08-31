@@ -20,6 +20,17 @@ elif [ "$dispositivos" == "$cad2" ]
 		echo -e "Ha ingresado la USB $nombre, es de confianza? ingrese s en caso de afirmativo"
 		read usb
 
+		if [[ "$usb" == "s" ]]; then
+			echo "$dispositivo" >> /bin/listaBlanca.txt
+		else 
+			echo "$dispositivo" >> /bin/listaNegra.txt
+		fi
 
+	fi
+	#touch $listaBlanca >> $dispositivo
+done
+
+
+#volumen log volumen fisico
 
 
