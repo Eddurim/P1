@@ -15,7 +15,10 @@ elif [ "$dispositivos" == "$cad2" ]
 		echo -e "USB ($nombre) detectada en lista negra, no se va a montar"
 	else
 		
-
+	#statements
+		echo "no match"
+		echo -e "Ha ingresado la USB $nombre, es de confianza? ingrese s en caso de afirmativo"
+		read usb
 
 
 
