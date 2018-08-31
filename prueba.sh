@@ -4,7 +4,6 @@ name=listado=$(lsusb | awk '{ print $7 }')
 listaBlanca=/bin/listaBlanca.txt
 listaNegra=/bin/listaNegra.txt
 
-
 for dispositivos in $listado; do
 	cad="$(grep -x $dispositivos $listaBlanca)"
 	cad2="$(grep -x $dispositivos $listaNegra)"
